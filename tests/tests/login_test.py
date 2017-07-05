@@ -31,7 +31,7 @@ class LoginTest(BaseTest):
         self.login = LoginPage(self.driver)
 
     def get_name(self):
-        return PAGE_NAME
+        return self.PAGE_NAME
 
     def test_valid_login(self):
         """Login with valid credentials, verify valid login message, log out, verify back at log in."""

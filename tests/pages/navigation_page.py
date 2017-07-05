@@ -45,7 +45,7 @@ class NavigationPage(BasePage):
 
     def go_to_category(self, category_name):
         """Clicks appropriate button in the navigation drawer."""
-        self.driver.find_element_by_accessibility_id(self.NAV_DRAWER_TOGGLE_ID).click()
+        self.driver.find_element_by_id(self.NAV_DRAWER_TOGGLE_ID).click()
         sleep(self.NAV_DRAWER_ANIMATION_DELAY)
 
         category_element = None
@@ -53,7 +53,10 @@ class NavigationPage(BasePage):
 
         while category_element is None and num_attempts < self.MAX_ATTEMPTS:
             try:
-                category_element = self.driver.find_element_by_name(category_name)
+                category_elements = self.driver.find_elements_by_id('com.amazonaws.devicefarm.android.referenceapp:id/drawer_row_title')
+                for categoryTitleElement in category_elements:
+                    if categoryTitleElement.text == category_name:
+                        category_element = categoryTitleElement
                 num_attempts += 1
             except NoSuchElementException:
                 self.scroll_nav_drawer_down()

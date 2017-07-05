@@ -26,7 +26,7 @@ class VideoPlayerTest(NativeTest):
         self.video_player = VideoPlayerPage(self.driver)
 
     def get_page_index(self):
-        return PAGE_INDEX
+        return self.PAGE_INDEX
 
     def test_video_player(self):
         """Verifies video is displayed."""

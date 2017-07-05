@@ -17,20 +17,23 @@ from tests.pages.base_pages.base_page import BasePage
 class AlertsPage(BasePage):
     """Alerts page representation"""
     ALERT_BUTTON_NAME = "ALERT"
+    ALERT_BUTTON_ID = "com.amazonaws.devicefarm.android.referenceapp:id/notifications_alert_button"
     ALERT_MESSAGE_NAME = "This is the alert message"
+    AlERT_MESSAGE_ID = "android:id/message"
     OK_BUTTON_NAME = "OK"
+    OK_BUTTON_ID = "android:id/button1"
 
     def click_alert_button(self):
         """Taps alert button."""
-        alert_button = self.driver.find_element_by_name(self.ALERT_BUTTON_NAME)
+        alert_button = self.driver.find_element_by_id(self.ALERT_BUTTON_ID)
         alert_button.click()
 
     def alert_text_is_displayed(self):
         """Returns visibility of alert's message as a boolean."""
-        alert_text = self.driver.find_element_by_name(self.ALERT_MESSAGE_NAME)
+        alert_text = self.driver.find_element_by_id(self.AlERT_MESSAGE_ID)
         return alert_text.is_displayed()
 
     def accept_alert_message(self):
         """Taps the OK button to accept the alert."""
-        ok_button = self.driver.find_element_by_name(self.OK_BUTTON_NAME)
+        ok_button = self.driver.find_element_by_id(self.OK_BUTTON_ID)
         ok_button.click()

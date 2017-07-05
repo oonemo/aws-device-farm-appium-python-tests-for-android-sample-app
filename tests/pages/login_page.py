@@ -17,11 +17,11 @@ from tests.pages.base_pages.base_page import BasePage
 
 class LoginPage(BasePage):
     """Login page representation."""
-    USERNAME_FIELD_ID = 'Username Input Field'
-    PASSWORD_FIELD_ID = 'Password Input Field'
+    USERNAME_FIELD_ID = 'com.amazonaws.devicefarm.android.referenceapp:id/username_text_input'
+    PASSWORD_FIELD_ID = 'com.amazonaws.devicefarm.android.referenceapp:id/password_text_input'
     ALT_MESSAGE_ID = 'Alt Message'
     ALT_BUTTON_ID = 'Alt Button'
-    LOG_IN_BUTTON_ID = 'Login Button'
+    LOG_IN_BUTTON_ID = 'com.amazonaws.devicefarm.android.referenceapp:id/login_button'
     KEYBOARD_ANIMATION_DELAY = 1
 
     def log_in(self, username, password):

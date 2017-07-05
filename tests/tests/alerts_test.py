@@ -26,7 +26,7 @@ class AlertsTest(BaseTest):
         self.alerts = AlertsPage(self.driver)
 
     def get_name(self):
-        return PAGE_NAME
+        return self.PAGE_NAME
 
     def test_alert(self):
         """Clicks alert button, verifies alert text, accepts the alert message."""

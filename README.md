@@ -6,7 +6,7 @@ Note: Your tests may be different than these and it is not a hard requirement th
 ### Using the Appium GUI
 1. Download and install the Appium GUI. [[Windows Download]](https://bitbucket.org/appium/appium.app/downloads/AppiumForWindows_1_4_16_1.zip). [[OS X Download]](https://bitbucket.org/appium/appium.app/downloads/appium-1.4.13.dmg).
 
-    **Currently, AWS Device Farm supports Appium version 1.4.16. Using a different version locally may cause unexpected results when running Appium tests on AWS Device Farm.**
+    **Currently, AWS Device Farm supports Appium version 1.4.16, 1.6.3 and 1.6.5. Using a different version locally may cause unexpected results when running Appium tests on AWS Device Farm.**
     
     **Note:** It would be always helpful to check the AWS Forums for checking the latest supported version and to use the same version in the steps below.
 
@@ -15,13 +15,13 @@ Note: Your tests may be different than these and it is not a hard requirement th
 ### Using the Appium CLI
 1. Follow the **[official Appium getting started guide](http://appium.io/slate/en/tutorial/android.html?java#getting-started-with-appium)** and install the Appium server and dependencies.
 
-    **Currently, AWS Device Farm supports Appium version 1.4.16. Using a different version locally may cause unexpected results when running Appium tests on AWS Device Farm.**
+    **Currently, AWS Device Farm supports Appium version 1.4.16, 1.6.3 and 1.6.5. Using a different version locally may cause unexpected results when running Appium tests on AWS Device Farm.**
 
     **Note:** It would be always helpful to check the AWS Forums for checking the latest supported version and to use the same version in the steps below.
-2. In order to use 1.4.16, download Appium through NPM with this command:
+2. In order to use 1.6.5, download Appium through NPM with this command:
 
     ```
-    $ npm install -g appium@1.4.16
+    $ npm install -g appium@1.6.5
     ```
     
 3. Verify that you have Appium installed with this command:
@@ -30,7 +30,7 @@ Note: Your tests may be different than these and it is not a hard requirement th
     $ appium -v
     ```
     
-   You should get "1.4.16" as the output
+   You should get "1.6.5" as the output
 
 ## Set up the Appium Python environment
 1. We recommend setting up [Python's virtualenv](https://pypi.python.org/pypi/virtualenv) for developing and packaging tests so that unnecessary dependencies are not including in the bundled zip file.

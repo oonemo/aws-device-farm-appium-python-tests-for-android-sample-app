@@ -36,7 +36,7 @@ class NestedViewsTest(BaseTest):
         self.nested_views.press_up_navigation()
         self.assertTrue(self.nested_views.first_level_text_is_displayed())
 
-        self.nested_views.press_next_level()
+        self.nested_views.press_up_next_level()
         self.assertTrue(self.nested_views.final_level_text_is_displayed())
 
         self.nested_views.press_up_navigation_back_button()
@@ -49,7 +49,7 @@ class NestedViewsTest(BaseTest):
         self.nested_views.press_back_navigation()
 
         for __ in range(self.NEXT_LEVEL_CLICKS):
-            self.nested_views.press_next_level()
+            self.nested_views.press_back_next_level()
 
         self.assertEquals(self.nested_views.get_counter(), self.BEFORE_COUNTER)
 

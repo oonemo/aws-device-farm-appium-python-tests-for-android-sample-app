@@ -30,8 +30,6 @@ class BaseTest(unittest.TestCase):
         desired_caps['platformName'] = 'Android'
         desired_caps['deviceName'] = 'aPhone'
         """
-        desired_caps['platformName'] = 'Android'
-        desired_caps['deviceName'] = 'aPhone'
         self.driver = webdriver.Remote(url, desired_caps)
         self.navigation_page = NavigationPage(self.driver)
 

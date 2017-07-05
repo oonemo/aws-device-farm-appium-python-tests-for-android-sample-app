@@ -19,6 +19,7 @@ class VideoPlayerPage(BasePage):
     """Video player page representation."""
     VIDEO_VIEW_CLASS = 'android.widget.VideoView'
     BAD_VIDEO_ALERT_NAME = "Can't play this video."
+    BAD_VIDEO_ALERT_NAME = "android:id/message"
 
     def video_is_displayed(self):
         """Returns visibility of video as boolean.
@@ -29,6 +30,6 @@ class VideoPlayerPage(BasePage):
         try:
             video_element = self.driver.find_element_by_class_name(self.VIDEO_VIEW_CLASS)
         except NoSuchElementException:
-            video_element = self.driver.find_element_by_name(self.BAD_VIDEO_ALERT_NAME)
+            video_element = self.driver.find_element_by_id(self.BAD_VIDEO_ALERT_ID)
 
         return video_element.is_displayed()
